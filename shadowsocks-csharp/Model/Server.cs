@@ -231,7 +231,7 @@ namespace Shadowsocks.Model
             }
         }
 
-        public string HiddenName(bool hide = true)
+        public string HiddenName(bool hide = false)
         {
             if (string.IsNullOrEmpty(server))
             {

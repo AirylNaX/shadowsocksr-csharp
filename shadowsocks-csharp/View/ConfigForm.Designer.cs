@@ -52,7 +52,6 @@
             this.UDPoverTCPLabel = new System.Windows.Forms.Label();
             this.CheckUDPoverUDP = new System.Windows.Forms.CheckBox();
             this.LabelNote = new System.Windows.Forms.Label();
-            this.PasswordLabel = new System.Windows.Forms.CheckBox();
             this.TCPoverUDPLabel = new System.Windows.Forms.Label();
             this.CheckTCPoverUDP = new System.Windows.Forms.CheckBox();
             this.TCPProtocolComboBox = new System.Windows.Forms.ComboBox();
@@ -67,7 +66,8 @@
             this.labelRemarks = new System.Windows.Forms.Label();
             this.labelProtocolParam = new System.Windows.Forms.Label();
             this.TextProtocolParam = new System.Windows.Forms.TextBox();
-            this.IPLabel = new System.Windows.Forms.CheckBox();
+            this.ServerIpLabel = new System.Windows.Forms.Label();
+            this.PasswordLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.LinkUpdate = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -203,7 +203,6 @@
             this.tableLayoutPanel1.Controls.Add(this.UDPoverTCPLabel, 0, 15);
             this.tableLayoutPanel1.Controls.Add(this.CheckUDPoverUDP, 1, 15);
             this.tableLayoutPanel1.Controls.Add(this.LabelNote, 1, 12);
-            this.tableLayoutPanel1.Controls.Add(this.PasswordLabel, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.TCPoverUDPLabel, 0, 14);
             this.tableLayoutPanel1.Controls.Add(this.CheckTCPoverUDP, 1, 14);
             this.tableLayoutPanel1.Controls.Add(this.TCPProtocolComboBox, 1, 5);
@@ -218,7 +217,8 @@
             this.tableLayoutPanel1.Controls.Add(this.labelRemarks, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.labelProtocolParam, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.TextProtocolParam, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.IPLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ServerIpLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PasswordLabel, 0, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 32);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -292,7 +292,6 @@
             this.IPTextBox.Name = "IPTextBox";
             this.IPTextBox.Size = new System.Drawing.Size(233, 21);
             this.IPTextBox.TabIndex = 7;
-            this.IPTextBox.UseSystemPasswordChar = true;
             this.IPTextBox.WordWrap = false;
             // 
             // NumServerPort
@@ -316,7 +315,6 @@
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(233, 21);
             this.PasswordTextBox.TabIndex = 11;
-            this.PasswordTextBox.UseSystemPasswordChar = true;
             this.PasswordTextBox.WordWrap = false;
             // 
             // EncryptionLabel
@@ -429,18 +427,6 @@
             this.LabelNote.Size = new System.Drawing.Size(179, 12);
             this.LabelNote.TabIndex = 29;
             this.LabelNote.Text = "NOT all server support belows";
-            // 
-            // PasswordLabel
-            // 
-            this.PasswordLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(30, 62);
-            this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(72, 16);
-            this.PasswordLabel.TabIndex = 10;
-            this.PasswordLabel.Text = "Password";
-            this.PasswordLabel.UseVisualStyleBackColor = true;
-            this.PasswordLabel.CheckedChanged += new System.EventHandler(this.PasswordLabel_CheckedChanged);
             // 
             // TCPoverUDPLabel
             // 
@@ -602,17 +588,25 @@
             this.TextProtocolParam.Size = new System.Drawing.Size(233, 21);
             this.TextProtocolParam.TabIndex = 17;
             // 
-            // IPLabel
+            // ServerIpLabel
             // 
-            this.IPLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.IPLabel.AutoSize = true;
-            this.IPLabel.Location = new System.Drawing.Point(24, 8);
-            this.IPLabel.Name = "IPLabel";
-            this.IPLabel.Size = new System.Drawing.Size(78, 16);
-            this.IPLabel.TabIndex = 38;
-            this.IPLabel.Text = "Server IP";
-            this.IPLabel.UseVisualStyleBackColor = true;
-            this.IPLabel.CheckedChanged += new System.EventHandler(this.IPLabel_CheckedChanged);
+            this.ServerIpLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ServerIpLabel.AutoSize = true;
+            this.ServerIpLabel.Location = new System.Drawing.Point(43, 10);
+            this.ServerIpLabel.Name = "ServerIpLabel";
+            this.ServerIpLabel.Size = new System.Drawing.Size(59, 12);
+            this.ServerIpLabel.TabIndex = 38;
+            this.ServerIpLabel.Text = "Server Ip";
+            // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Location = new System.Drawing.Point(49, 64);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(53, 12);
+            this.PasswordLabel.TabIndex = 39;
+            this.PasswordLabel.Text = "Password";
             // 
             // tableLayoutPanel7
             // 
@@ -822,7 +816,6 @@
         private System.Windows.Forms.Label UDPoverTCPLabel;
         private System.Windows.Forms.CheckBox CheckUDPoverUDP;
         private System.Windows.Forms.Label LabelNote;
-        private System.Windows.Forms.CheckBox PasswordLabel;
         private System.Windows.Forms.Label TCPoverUDPLabel;
         private System.Windows.Forms.CheckBox CheckTCPoverUDP;
         private System.Windows.Forms.ComboBox TCPProtocolComboBox;
@@ -840,7 +833,8 @@
         private System.Windows.Forms.Button OKButton;
         private System.Windows.Forms.Label labelProtocolParam;
         private System.Windows.Forms.TextBox TextProtocolParam;
-        private System.Windows.Forms.CheckBox IPLabel;
+        private System.Windows.Forms.Label ServerIpLabel;
+        private System.Windows.Forms.Label PasswordLabel;
     }
 }
 

@@ -152,7 +152,7 @@ namespace Shadowsocks.View
             DownButton.Text = I18N.GetString("Down");
 
             const string mark_str = "* ";
-            IPLabel.Text = mark_str + I18N.GetString("Server IP");
+            ServerIpLabel.Text = mark_str + I18N.GetString("Server IP");
             ServerPortLabel.Text = mark_str + I18N.GetString("Server Port");
             labelUDPPort.Text = I18N.GetString("UDP Port");
             PasswordLabel.Text = mark_str + I18N.GetString("Password");
@@ -391,7 +391,7 @@ namespace Shadowsocks.View
                     }
                     else
                     {
-                        ServersListBox.Items.Add("      " + server.HiddenName());
+                        ServersListBox.Items.Add("-" + server.HiddenName());
                     }
                 }
             }
@@ -405,7 +405,7 @@ namespace Shadowsocks.View
                     }
                     else
                     {
-                        ServersListBox.Items[i] = "      " + _modifiedConfiguration.configs[i].HiddenName();
+                        ServersListBox.Items[i] = "-" + _modifiedConfiguration.configs[i].HiddenName();
                     }
                 }
             }
@@ -690,18 +690,6 @@ namespace Shadowsocks.View
             System.Diagnostics.Process.Start(updateChecker.LatestVersionURL);
         }
 
-        private void PasswordLabel_CheckedChanged(object sender, EventArgs e)
-        {
-            if (PasswordLabel.Checked)
-            {
-                PasswordTextBox.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                PasswordTextBox.UseSystemPasswordChar = true;
-            }
-        }
-
         private void UpdateObfsTextbox()
         {
             try
@@ -773,16 +761,6 @@ namespace Shadowsocks.View
             ResumeLayout();
         }
 
-        private void IPLabel_CheckedChanged(object sender, EventArgs e)
-        {
-            if (IPLabel.Checked)
-            {
-                IPTextBox.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                IPTextBox.UseSystemPasswordChar = true;
-            }
-        }
+    
     }
 }

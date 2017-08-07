@@ -252,11 +252,11 @@ namespace Shadowsocks.View
                     CreateMenuItem("Server statistic...", new EventHandler(this.ShowServerLogItem_Click)),
                     CreateMenuItem("Disconnect current", new EventHandler(this.DisconnectCurrent_Click)),
                 }),
-                CreateMenuGroup("Servers Subscribe", new MenuItem[] {
+               /* CreateMenuGroup("Servers Subscribe", new MenuItem[] {
                     CreateMenuItem("Subscribe setting...", new EventHandler(this.SubscribeSetting_Click)),
                     CreateMenuItem("Update subscribe SSR node", new EventHandler(this.CheckNodeUpdate_Click)),
                     CreateMenuItem("Update subscribe SSR node(bypass proxy)", new EventHandler(this.CheckNodeUpdateBypassProxy_Click)),
-                }),
+                }),*/
                 SelectRandomItem = CreateMenuItem("Load balance", new EventHandler(this.SelectRandomItem_Click)),
                 CreateMenuItem("Global settings...", new EventHandler(this.Setting_Click)),
                 CreateMenuItem("Port settings...", new EventHandler(this.ShowPortMapItem_Click)),
@@ -265,7 +265,7 @@ namespace Shadowsocks.View
                 CreateMenuItem("Scan QRCode from screen...", new EventHandler(this.ScanQRCodeItem_Click)),
                 CreateMenuItem("Import SSR links from clipboard...", new EventHandler(this.CopyAddress_Click)),
                 new MenuItem("-"),
-                CreateMenuGroup("Help", new MenuItem[] {
+             /*   CreateMenuGroup("Help", new MenuItem[] {
                     CreateMenuItem("Check update", new EventHandler(this.CheckUpdate_Click)),
                     CreateMenuItem("Show logs...", new EventHandler(this.ShowLogItem_Click)),
                     CreateMenuItem("Open wiki...", new EventHandler(this.OpenWiki_Click)),
@@ -276,7 +276,7 @@ namespace Shadowsocks.View
                     new MenuItem("-"),
                     CreateMenuItem("About...", new EventHandler(this.AboutItem_Click)),
                     CreateMenuItem("Donate...", new EventHandler(this.DonateItem_Click)),
-                }),
+                }),*/
                 CreateMenuItem("Quit", new EventHandler(this.Quit_Click))
             });
             this.UpdateItem.Visible = false;
